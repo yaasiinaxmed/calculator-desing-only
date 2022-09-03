@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+:root{
+    --background-color: #e7e7e7;
+    --box-color: #ededed;
+    --box-shadow-color: #d1cdce;
+    --sand-color: #ff8b38;
+    --reset-color: #367f88;
+    --btn-shadow-color: #9e9abf;
+    --reset-shadow-color: #216067;
+    --sand-shadow-color: #b04d0c;
+    --white-color: #ffffff;
+}
+body{
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.container{
+    width: 460px;
+    min-height: 550px;
+    background: var(--white-color) ;
+    border-radius: 15px;
+    box-shadow: 0px 0px 9px -3px rgba(0, 0, 0, 0.83);
+}
+.box-1{
+    background: var(--sand-color);
+    padding: 30px;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.box-1 input{  
+    border: none;
+    outline: none;
+    padding: 20px 0;
+    background: var(--sand-color);
+    font-size: 35px;
+    font-weight: 500;
+    width: 100%;
+    text-align: right;
+}
+.calculator{
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr;
+    gap: 22px;
+    margin-top: 1rem;
+}
+.calculator button{
+  padding: 7px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  background: var(--box-color);
+  border-radius: 8px;
+  box-shadow: inset 0 -3px 0 0  var(--box-shadow-color) ;
+  cursor: pointer;
+  transition: .3s;
+}
+.calculator button:hover{
+    background: var(--box-shadow-color);
+    border-radius: 8px;
+    box-shadow: inset 0 -3px 0 0  var(--box-color) ;
+}
+.container button:nth-child(17){
+    grid-column: 1/3;
+    background: var(--reset-color);
+    box-shadow: inset 0 -3px 0 0 var(--reset-shadow-color);
+    color: white;
+}
+.container button:nth-child(4){
+    background: var(--reset-color);
+    box-shadow: inset 0 -3px 0 0 var(--reset-shadow-color);
+    color: white;
+}
+.container button:nth-child(17):hover, .container button:nth-child(4):hover{
+    background: var(--reset-shadow-color);
+    box-shadow: inset 0 -3px 0 0 var(--reset-color);
+    color: white;
+}
+.container button:nth-child(18){
+    grid-column: 3/5;
+    background: var(--sand-color);
+    box-shadow: inset 0 -3px 0 0 var(--sand-shadow-color);
+    color: white;
+}
+.container button:nth-child(18):hover{
+    box-shadow:  0 3px 0 0 var(--sand-shadow-color);
+}
+
+@media (max-width: 490px){
+    .container{
+        width: 360px;
+    }
+}
+@media (max-width: 370px){
+    .container{
+        width: 350px;
+    }
+    .calculator{
+        padding: 20px;
+        gap: 15px;
+    }
+}
