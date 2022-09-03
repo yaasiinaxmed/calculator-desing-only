@@ -42,10 +42,11 @@ body{
     outline: none;
     padding: 20px 0;
     background: var(--sand-color);
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 500;
     width: 100%;
     text-align: right;
+    color: white;
 }
 .calculator{
     padding: 30px;
